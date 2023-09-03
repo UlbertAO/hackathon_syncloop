@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT video title</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/action.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="brand">YT</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Update Video Title with view count</h1>
+
+        <label for="PlaylistId">PlaylistId:</label>
+        <span><i>Enter PlaylistId to update title of last uploaded video.</i></span>
+
+        <input type="text" id="PlaylistId" name="PlaylistId" required>
+        
+        <button type="submit" id="updateTitle" disabled>Update Title</button>
+        
+        <div id="result"></div>
+        <a id="ytLink" href="#" target="_blank"></a>
+    </div>
+</body>
+</html>
