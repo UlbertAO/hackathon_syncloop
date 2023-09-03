@@ -48,7 +48,9 @@ function extraction() {
                 updateTitle.disabled=false;
                 updateTitle.textContent="Update Title"
 
-                document.getElementById('result').textContent = "Title Updated Successfully. Click on the below link to view your video."
+                console.log(data);
+
+                document.getElementById('result').innerHTML = "Title Updated Successfully. Click on the below link to view your video.<br>Updated Title : " + data?.result?.jsonDoc?.snippet?.title
                 const vidId=data?.result?.jsonDoc?.id
                 if(vidId){
                 document.getElementById('ytLink').textContent = "https://www.youtube.com/watch?v=" + vidId;
