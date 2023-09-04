@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 const axios = require('axios');
-const bodyParser = require('body-parser');
 
 // Load environment variables from .env file
 dotenv.config({path:".env"})
@@ -13,9 +12,8 @@ const app = express();
 
 app.use(express.static(path.join(__dirname,"Public")));
 
-// app.use(express.json());
-app.use(bodyParser.json());
-console.log(__dirname);
+app.use(express.json());
+// console.log(__dirname);
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve('pages/index.html'));
